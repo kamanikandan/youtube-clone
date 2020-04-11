@@ -2,7 +2,6 @@ import React from "react";
 import Card from "./Card";
 
 const Videos = ({ videos, playingVideo }) => {
-  console.log(videos);
   return (
     <div className="container">
       <div className="videos-wrapper">
