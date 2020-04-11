@@ -7,7 +7,7 @@ const Header = ({ getsearchText }) => {
       <div className="container">
         <div className="container-wrapper">
           <h1 onClick={() => getsearchText("india")}>
-            VID<span>FLIX</span>
+            YouTube<span>Clone</span>
           </h1>
           <Search getsearchText={getsearchText} />
         </div>

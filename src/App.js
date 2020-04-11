@@ -20,7 +20,7 @@ function App() {
       try {
         const data = await getVideos(searchKey);
         setIsLoading(false);
-        data?.length == 0 ? setVideos([]) : setVideos(data);
+        data?.length === 0 ? setVideos([]) : setVideos(data);
       } catch (err) {
         console.log(err);
       }
