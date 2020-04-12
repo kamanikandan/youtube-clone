@@ -6,8 +6,8 @@ const Header = ({ getsearchText }) => {
     <header className="row app-header">
       <div className="container">
         <div className="container-wrapper">
-          <h1 onClick={() => getsearchText("india")}>
-            YouTube<span>Clone</span>
+          <h1 onClick={() => getsearchText("")}>
+            <span>YouTube</span>Clone
           </h1>
           <Search getsearchText={getsearchText} />
         </div>

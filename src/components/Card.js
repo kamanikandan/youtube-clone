@@ -28,7 +28,7 @@ const Card = ({ video, playingVideo }) => {
           onClick={(e) => e.stopPropagation()}
           href={`https://www.youtube.com/channel/${video.snippet.channelId}`}
         >
-          {video.snippet.channelTitle}{" "}
+          {video.snippet.channelTitle}
           <span aria-label="External Link" role="img">
             🔗
           </span>

@@ -1,7 +1,8 @@
 import axios from "axios";
 import { API_KEY } from "../config";
+import localData from "./data.json";
 
-const getVideos = async (searchText) => {
+export const getVideos = async (searchText) => {
   try {
     const response = await axios.get(
       "https://www.googleapis.com/youtube/v3/search",
@@ -18,8 +19,14 @@ const getVideos = async (searchText) => {
     );
     return response.data.items;
   } catch (err) {
-    return err.response.status;
+    if (err?.response?.status > 400 || err.message === "Network Error") {
+      let regEx = new RegExp(`${searchText}`, "gi");
+      const filteredData = localData.items.filter(
+        (video) =>
+          video.snippet.title.match(regEx) ||
+          video.snippet.channelTitle.match(regEx)
+      );
+      return filteredData;
+    }
   }
 };
-
-export default getVideos;
