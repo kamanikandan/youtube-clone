@@ -16,9 +16,7 @@ const Search = ({ getsearchText }) => {
           className="form-control"
           type="text"
         />
-        <button className="btn" type="submit">
-          Search
-        </button>
+        <button className="btn" type="submit"></button>
       </form>
     </div>
   );

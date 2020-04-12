@@ -11,7 +11,7 @@ import "./App.css";
 
 function App() {
   const [videos, setVideos] = useState([]);
-  const [searchText, setSearchText] = useState("mosh");
+  const [searchText, setSearchText] = useState("programming with mosh");
   const [playingVideo, setPlayingVideo] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
