@@ -21,8 +21,12 @@ const Player = ({ video, playingVideo }) => {
           </span>
           <iframe
             title={video.snippet.title}
-            width={browserSize.width * 0.65}
-            height={browserSize.height * 0.75}
+            width={browserSize.width * 0.8}
+            height={
+              browserSize.height > browserSize.width
+                ? browserSize.height * 0.5
+                : browserSize.height * 0.75
+            }
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
